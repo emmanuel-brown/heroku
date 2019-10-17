@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === "production") {
 // database connection ppol
 let db = ""
 let dbName = "notetaker"
-MongoClient.connect(uri, { useNewUrlParser: true,                            
+MongoClient.connect(process.env.ATLAS_URI, { useNewUrlParser: true,                            
                            useUnifiedTopology: true }, 
     (err, client) => 
       {
